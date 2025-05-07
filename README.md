@@ -1,1 +1,1 @@
-# BHAKTI.fnlfrontend
+https://www.figma.com/proto/sv5sPu2ELzlS4uGZVOzAD2/SBI_fintech?page-id=0%3A1&node-id=160-64&viewport=993%2C-128%2C0.17&t=cDxxyjk0U75bGteK-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=160%3A116# BHAKTI.fnlfrontend
