@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SBI Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="logo">
+      <img src="images/sbi-logo.png" alt="SBI Logo" class="sbi-image">
+    </div>
+    <div class="help" onclick="openHelp()">❓</div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User Icon">
+      </div>
+      <div class="title">Personal Banking</div>
+      <button onclick="goToLogin()">Login</button>
+    </div>
+
+    <div class="card">
+      <div class="yono-logo">
+        <img src="images/yono-logo.png" alt="Yono SBI Logo">
+      </div>
+      <div class="title">Corporate Banking</div>
+      <button onclick="goToLogin()">Login</button>
+    </div>
+  </div>
+
+  <!-- Help Modal -->
+  <div id="helpModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeHelp()">&times;</span>
+      <h3>What type of help do you want?</h3>
+      <input type="text" id="helpInput" placeholder="Type your query here">
+      <button onclick="submitHelp()">Submit</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SBI Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="logo">
+      <img src="sbi-logo.png" alt="SBI Logo" class="sbi-image">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="left-box">
+      <img src="img.png" alt="Be Safe Image">
+    </div>
+
+    <div class="right-box">
+      <form>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <input type="text" placeholder="Enter CAPTCHA">
+
+        <div class="captcha-options">
+          <label><input type="radio" name="captcha" checked> Image CAPTCHA</label>
+          <label><input type="radio" name="captcha"> Audio CAPTCHA</label>
+        </div>
+
+        <div class="captcha-img">
+          <img src="captcha.png" alt="Captcha Image">
+          <span class="reload">🔄</span>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <a href="#" class="forgot">Forgot Password?</a>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html> -->

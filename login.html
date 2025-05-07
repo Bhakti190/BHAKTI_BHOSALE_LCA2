@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SBI Login</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="../captcha/captcha.js" defer></script>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="logo">
+      <img src="../images/sbi-logo.png" alt="SBI Logo" class="sbi-image">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="left-box">
+      <img src="../images/img.png" alt="Be Safe Image">
+    </div>
+
+    <div class="right-box">
+      <form onsubmit="return validateCaptcha()">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="text" id="captchaInput" placeholder="Enter CAPTCHA" required>
+
+
+        <div class="captcha-options">
+          <label><input type="radio" name="captcha" checked> Image CAPTCHA</label>
+          <label><input type="radio" name="captcha"> Audio CAPTCHA</label>
+        </div>
+
+        <div class="captcha-img">
+          <div id="captchaText"></div>
+          <span class="reload" onclick="generateCaptcha()">🔄</span>
+        </div>
+
+        <button type="submit">Login</button>
+        <p id="message"></p>
+
+        <a href="../forgot-password.html" class="forgot">Forgot Password?</a>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>

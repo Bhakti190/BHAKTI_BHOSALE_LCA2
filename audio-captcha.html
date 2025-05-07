@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audio CAPTCHA Example</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 30px;
+      background: #f0f0f0;
+    }
+
+    .captcha-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background: #0066cc;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="captcha-box">
+    <h2>Audio CAPTCHA</h2>
+
+    <audio id="audioCaptcha" src="audio/captcha1.mp3"></audio>
+
+    <button onclick="playAudio()">🔊 Play CAPTCHA</button>
+
+    <input type="text" id="captchaInput" placeholder="Type what you hear" />
+
+    <button onclick="verifyCaptcha()">Verify</button>
+
+    <p id="result"></p>
+  </div>
+
+  <script>
+    // actual text for captcha1.mp3 might be "5721"
+    const actualCaptchaText = "5721";
+
+    function playAudio() {
+      document.getElementById('audioCaptcha').play();
+    }
+
+    function verifyCaptcha() {
+      const userInput = document.getElementById('captchaInput').value.trim();
+      const result = document.getElementById('result');
+
+      if (userInput === actualCaptchaText) {
+        result.textContent = "✅ CAPTCHA Verified!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "❌ Wrong CAPTCHA, try again.";
+        result.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
